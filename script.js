@@ -67,3 +67,43 @@ document.getElementById("todoText").addEventListener("keypress", function(event)
     }
     
 });
+
+
+
+
+
+// Js - objekt
+// Samling af data
+
+//objekt
+const teacher1 = { 
+    email: "jrs@ek.dk",
+    firstname: 'Jeppe',
+    lastname: "Stockmar"
+};
+
+const teacher2 = { 
+    email: "kirs@ek.dk",
+    firstname: 'Christian',
+    lastname: "Kirschberg"
+};
+
+//.                   teacher er et navn som jeg har valgt her
+function printTeacher(teacher) {
+    
+    document.getElementById("pTeacher").textContent = "Hej " + teacher.firstname 
+        + " " + teacher.lastname + " din email er " + teacher.email + " hvis du er for gammel til at huske den"
+}
+
+printTeacher(teacher1)
+
+
+
+
+const quiz1 = {
+    // skriv et spørgsmål og et svar. 2 Attributter. question og answer
+}
+
+const quiz2 = {
+
+}
