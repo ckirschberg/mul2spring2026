@@ -80,6 +80,7 @@ const teacher1 = {
     email: "jrs@ek.dk",
     firstname: 'Jeppe',
     lastname: "Stockmar",
+    age: 18,
     address: {
         street: "Jægersborg alle",
         number: 13,
@@ -142,7 +143,7 @@ function randomNumber1to3() {
 }
 
 const random2 = randomNumber1to3();
-alert(random2)
+//alert(random2)
 
 
 
@@ -156,3 +157,24 @@ const quiz1 = {
 const quiz2 = {
 
 }
+
+
+function getName(person) {
+    return person.firstname;
+}
+function getFullName(person) {
+    return person.firstname + " " + person.lastname;
+}
+function isLegalAge(person) {
+    return person.age >= 18;
+
+    // if (person.age >= 18) {
+    //     return true;
+    // } else {
+    //     return false;
+    // }
+}
+
+console.log("exercise1: " + getName(teacher1));
+console.log("exercise2: " + getFullName(teacher1));
+console.log("exercise3: isLegalAge? " + isLegalAge(teacher1))
