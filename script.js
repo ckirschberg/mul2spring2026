@@ -79,23 +79,72 @@ document.getElementById("todoText").addEventListener("keypress", function(event)
 const teacher1 = { 
     email: "jrs@ek.dk",
     firstname: 'Jeppe',
-    lastname: "Stockmar"
+    lastname: "Stockmar",
+    address: {
+        street: "Jægersborg alle",
+        number: 13,
+        city: "Charlottenlund"
+    }
 };
 
 const teacher2 = { 
     email: "kirs@ek.dk",
     firstname: 'Christian',
-    lastname: "Kirschberg"
+    lastname: "Kirschberg", 
+    age: 17,
+    address: {
+        street: "Vesterbrovej",
+        number: 1,
+        city: "Copenhagen"
+    }
 };
 
+
+
+document.getElementById("jeppeSerPåSinTelefon").textContent = "";
 //.                   teacher er et navn som jeg har valgt her
-function printTeacher(teacher) {
-    
-    document.getElementById("pTeacher").textContent = "Hej " + teacher.firstname 
-        + " " + teacher.lastname + " din email er " + teacher.email + " hvis du er for gammel til at huske den"
+                    // definerer jeg en parameter og giver den et navn
+function printTeacher(student) {
+    let tal = 1;
+    tal = tal +1
+    console.log(tal);
+
+    // bruger jeg parameteren ud fra dens navn
+    document.getElementById("jeppeSerPåSinTelefon").textContent = document.getElementById("jeppeSerPåSinTelefon").textContent +
+    " Hej " + student.firstname 
+        + " " + student.lastname + " din email er " + student.email + " hvis du er for gammel til at huske den" + 
+        " " + student.address.street
+
+        console.log(student.address)
 }
 
-printTeacher(teacher1)
+
+
+//printTeacher(teacher2)
+
+
+// Array - liste af noget.
+const teachers = []; // tom liste
+teachers.push(teacher1);
+teachers.push(teacher2);
+// Nu ligger teacher1 objektet og teacher2 objektet i et array.
+
+teachers.forEach((teacher) => {
+    printTeacher(teacher);
+})
+
+
+
+// funktion som returnerer noget.
+function randomNumber1to3() {
+    const randomNumber = Math.floor(Math.random()*3)+1;
+    return randomNumber; // returnerer et tilfældigt tal
+}
+
+const random2 = randomNumber1to3();
+alert(random2)
+
+
 
 
 
