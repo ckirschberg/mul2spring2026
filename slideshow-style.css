@@ -3,6 +3,11 @@
             padding: 0;
             box-sizing: border-box;
         }
+        body {
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+        }
         img {
             width: 100%;
             height: auto;
@@ -16,9 +21,13 @@
             display: grid;
             grid-template-areas: "slide";
         }
+        .active {
+            transition: 0.5s ease;
+        }
         .slide {
             grid-area: slide;
             position: relative;
+            transition: 0.5s ease;
         }
         .prev, .next {
             cursor: pointer;
