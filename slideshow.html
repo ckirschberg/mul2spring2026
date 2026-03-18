@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slideshow</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .slideshow-container {
+            max-width: 1000px;
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            display: grid;
+            grid-template-areas: "slide";
+        }
+        .slide {
+            grid-area: slide;
+            position: relative;
+        }
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            margin-top: -24px;
+            padding: 15px;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 24px;
+            text-decoration: none;
+            transition: 0.5s ease;
+            z-index: 2;
+        }
+        .next {
+            right: 0;
+        }
+        .prev:hover, .next:hover {
+            color: white;
+        }
+        .caption {
+            position: absolute;
+            bottom: 15px;
+            left: 15px;
+            color: rgba(255, 255, 255, 0.8);
+            font-family: system-ui;
+            font-size: .8em;
+        }
+    </style>
+</head>
+<body>
+    <div class="slideshow-container">
+        <div class="slide">
+            <img src="img/cat-1.jpg" alt="kat">
+            <div class="caption">Photo: Jeppe</div>
+        </div>
+        <div class="slide">
+            <img src="img/cat-2.jpg" alt="kat">
+            <div class="caption">Photo: Merete</div>
+        </div>
+        <div class="slide">
+            <img src="img/cat-3.jpg" alt="kat">
+            <div class="caption">Photo: Christian</div>
+        </div>
+        <a class="prev">&#10094;</a>
+        <a class="next">&#10095;</a>
+    </div>
+
+    <script>
+    
+    </script>
+</body>
+</html>
